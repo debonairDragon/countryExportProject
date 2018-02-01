@@ -1,0 +1,23 @@
+import edu.duke.*;
+import org.apache.commons.csv.*;
+/**
+ * Write a description of weatherAnalysis here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class weatherAnalysis {
+
+    public double coldestHourInFile(CSVParser parser) {
+        FileResource fr = new FileResource();
+        CSVParser parser = fr.getCSVParser();
+        for (CSVRecord record : parser) {
+          String temperature = record.get("TemperatureF");
+        };
+        return temperature;
+    };
+    
+    public void coldestHourInFileTEST() {
+        
+    };
+}
